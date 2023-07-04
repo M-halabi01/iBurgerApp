@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/burger_background"
+    tools:context=".Burger">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/back_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/back"
+            android:text="BURGER"
+            android:textColor="@color/Orange"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/drawer1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/food_menu" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/back">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+                android:rowCount="3">
+
+                <androidx.cardview.widget.CardView
+                    android:backgroundTint="#33FFFFFF"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ly1"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:background="@drawable/item3"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/frame1"
+                                android:layout_width="30dp"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="70dp"
+                                android:background="@drawable/frame">
+
+                                <ImageView
+                                    android:id="@+id/plus1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/plus" />
+
+                                <ImageView
+                                    android:id="@+id/minus1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="70dp"
+                                    android:src="@drawable/minus" />
+                            </FrameLayout>
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp">
+
+                                <RadioButton
+                                    android:id="@+id/single1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="CHEES&#xA;BURGER"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/singlePrice1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="50dp"
+                                        android:text="5"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="JD"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <RadioButton
+                                    android:id="@+id/meal1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:text="MEAL"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/mealPrice1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="40dp"
+                                        android:text="6"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="JD"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/quantity1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ly1"
+                            android:layout_marginStart="85dp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:backgroundTint="#33FFFFFF"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ly2"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:background="@drawable/item2"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/frame2"
+                                android:layout_width="30dp"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="70dp"
+                                android:background="@drawable/frame">
+
+                                <ImageView
+                                    android:id="@+id/plus2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/plus" />
+
+                                <ImageView
+                                    android:id="@+id/minus2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="70dp"
+                                    android:src="@drawable/minus" />
+                            </FrameLayout>
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp">
+
+                                <RadioButton
+                                    android:id="@+id/single2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="BFR&#xA;BURGER"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/singlePrice2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="50dp"
+                                        android:text="4"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="JD"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <RadioButton
+                                    android:id="@+id/meal2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:text="MEAL"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/mealPrice2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="40dp"
+                                        android:text="6"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="JD"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/quantity2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ly2"
+                            android:layout_marginStart="85dp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:backgroundTint="#33FFFFFF"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ly3"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:background="@drawable/item1"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/frame3"
+                                android:layout_width="30dp"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="70dp"
+                                android:background="@drawable/frame">
+
+                                <ImageView
+                                    android:id="@+id/plus3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/plus" />
+
+                                <ImageView
+                                    android:id="@+id/minus3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="70dp"
+                                    android:src="@drawable/minus" />
+                            </FrameLayout>
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp">
+
+                                <RadioButton
+                                    android:id="@+id/single3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="BEEF&#xA;BURGER"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/singlePrice3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="50dp"
+                                        android:text="6"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="JD"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <RadioButton
+                                    android:id="@+id/meal3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:text="MEAL"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/mealPrice3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="40dp"
+                                        android:text="7"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="JD"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/quantity3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ly3"
+                            android:layout_marginStart="85dp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:backgroundTint="#33FFFFFF"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ly4"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:background="@drawable/item3"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/frame4"
+                                android:layout_width="30dp"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="70dp"
+                                android:background="@drawable/frame">
+
+                                <ImageView
+                                    android:id="@+id/plus4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/plus" />
+
+                                <ImageView
+                                    android:id="@+id/minus4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="70dp"
+                                    android:src="@drawable/minus" />
+                            </FrameLayout>
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp">
+
+                                <RadioButton
+                                    android:id="@+id/single4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="MASH&#xA;BURGER"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/singlePrice4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="50dp"
+                                        android:text="3"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="JD"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <RadioButton
+                                    android:id="@+id/meal4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:text="MEAL"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/mealPrice4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="40dp"
+                                        android:text="4"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="JD"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/quantity4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ly4"
+                            android:layout_marginStart="85dp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:backgroundTint="#33FFFFFF"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ly5"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:background="@drawable/item2"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/frame5"
+                                android:layout_width="30dp"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="70dp"
+                                android:background="@drawable/frame">
+
+                                <ImageView
+                                    android:id="@+id/plus5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/plus" />
+
+                                <ImageView
+                                    android:id="@+id/minus5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="70dp"
+                                    android:src="@drawable/minus" />
+                            </FrameLayout>
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp">
+
+                                <RadioButton
+                                    android:id="@+id/single5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="CHICKEN&#xA;BURGER"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/singlePrice5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="50dp"
+                                        android:text="3"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="JD"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <RadioButton
+                                    android:id="@+id/meal5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:text="MEAL"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/mealPrice5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="40dp"
+                                        android:text="5"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="JD"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/quantity5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ly5"
+                            android:layout_marginStart="85dp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:backgroundTint="#33FFFFFF"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="6dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:id="@+id/ly6"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:background="@drawable/item1"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:id="@+id/frame6"
+                                android:layout_width="30dp"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="70dp"
+                                android:background="@drawable/frame">
+
+                                <ImageView
+                                    android:id="@+id/plus6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/plus" />
+
+                                <ImageView
+                                    android:id="@+id/minus6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginTop="70dp"
+                                    android:src="@drawable/minus" />
+                            </FrameLayout>
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp">
+
+                                <RadioButton
+                                    android:id="@+id/single6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:checked="true"
+                                    android:text="ANGUS&#xA;BURGER"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/singlePrice6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="50dp"
+                                        android:text="5"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="JD"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <RadioButton
+                                    android:id="@+id/meal6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:text="MEAL"
+                                    android:layout_marginTop="10dp"
+                                    android:textColor="@color/black"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/mealPrice6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="40dp"
+                                        android:text="7"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="JD"
+                                        android:textSize="20sp"
+                                        android:textColor="@color/black"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/quantity6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ly6"
+                            android:layout_marginStart="85dp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </GridLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@drawable/menu">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/drawer2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/food_menu" />
+
+            <TextView
+                android:id="@+id/profileDrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="30dp"
+                android:text="PROFILE"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/burgerDrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="25dp"
+                android:text="BURGER"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/snacksDrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="25dp"
+                android:text="SNACKS"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ordersDrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="25dp"
+                android:text="ORDERS"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/locationsDrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="25dp"
+                android:text="LOCATIONS"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/logoutDrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="60dp"
+                android:text="LOGOUT"
+                android:textColor="#F22525"
+                android:textSize="35sp" />
+        </LinearLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
