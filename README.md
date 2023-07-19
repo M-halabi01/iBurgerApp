@@ -1,5 +1,5 @@
 # iBurgerApp
-Static Android application for a restaurant.
+## Static Android application for a restaurant.
 
 ![IburgerApp1](https://github.com/M-halabi01/iBurgerApp/assets/103825009/e58ddfc4-2524-412c-b2e6-050242050e5a)
 ![IburgerApp2](https://github.com/M-halabi01/iBurgerApp/assets/103825009/ee8dfd53-25d8-4cff-b990-aa0c0b5cdcff)
